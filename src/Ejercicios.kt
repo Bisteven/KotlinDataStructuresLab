@@ -25,3 +25,19 @@ fun reto1(){
     println("Gasto más alto: $mayor")
     println("Gasto más bajo: $menor")
 }
+
+fun reto2(){
+
+    val empleados = listOf(
+        Pair("carlos", 28),
+        Pair("lucía", 35),
+        Pair("jorge", 42),
+        Pair("ana", 25),
+        Pair("sofía", 31))
+
+        .filter{it.second > 30}
+        .map {it.first.uppercase()}
+
+    println("Los empleados con más de 30 años son: $empleados")
+}
+
