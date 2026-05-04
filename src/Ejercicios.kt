@@ -171,4 +171,17 @@ fun reto16() {
     sensores.removeIf { it % 3 == 0 }
     println("Sensores activos: $sensores")
 }
-
+fun reto17() {
+    println("=========Reto 17==========")
+    val almacen = arrayOf(
+        intArrayOf(1, 2, 3, 4), intArrayOf(5, 6, 7, 8),
+        intArrayOf(9, 10, 11, 12), intArrayOf(13, 14, 15, 16)
+    )
+    var sumaPrincipal = 0; var sumaSecundaria = 0; val n = 4
+    for (i in 0 until n) {
+        sumaPrincipal += almacen[i][i]
+        sumaSecundaria += almacen[i][n - 1 - i]
+    }
+    println("Diagonal principal: $sumaPrincipal")
+    println("Diagonal secundaria: $sumaSecundaria")
+}
