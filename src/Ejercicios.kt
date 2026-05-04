@@ -126,3 +126,13 @@ fun reto10() {
     println("Turno original: $empleados")
     println("Turno rotado $k posiciones: $rotado")
 }
+
+fun reto11() {
+    println("=========Reto 11==========")
+    val objetos = listOf("Zapatos" to 2, "Camisa" to 1, "Pantaloneta" to 1, "Libro" to 2)
+    val agrupados = mutableMapOf<Int, MutableList<String>>()
+    for ((nombre, peso) in objetos) {
+        agrupados.getOrPut(peso) { mutableListOf() }.add(nombre)
+    }
+    agrupados.forEach { (peso, items) -> println("$peso kg: $items") }
+}
