@@ -165,4 +165,10 @@ fun reto15() {
     }
     conIva.forEach { (p, v) -> println("$p: $$v") }
 }
+fun reto16() {
+    println("=========Reto 16==========")
+    val sensores = mutableListOf(1, 3, 5, 6, 9, 12, 15, 7, 18)
+    sensores.removeIf { it % 3 == 0 }
+    println("Sensores activos: $sensores")
+}
 
