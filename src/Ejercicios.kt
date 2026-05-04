@@ -77,4 +77,24 @@ fun reto6() {
     println("Pasatiempos en común: $comunes")
     println("Exclusivos de persona1: $exclusivos")
 }
+fun reto7() {
+    println("=========Reto 7==========")
+    val despensa = mutableMapOf("Arroz" to 5, "Aceite" to 2, "Sal" to 1)
+
+    fun consumir(producto: String, cantidad: Int) {
+        val actual = despensa[producto] ?: return println("$producto no existe")
+        val restante = actual - cantidad
+        if (restante <= 0) {
+            despensa.remove(producto)
+            println("⚠ $producto agotado y eliminado")
+        } else {
+            despensa[producto] = restante
+            println("$producto: quedan $restante unidades")
+        }
+    }
+
+    consumir("Arroz", 3)
+    consumir("Sal", 2)
+    println("Despensa: $despensa")
+}
 
