@@ -254,3 +254,17 @@ fun reto23() {
     println("Hoy: $hoy cal | Promedio anterior: ${"%.1f".format(promedio)} cal")
     println("Diferencia: ${if (diferencia >= 0) "+" else ""}${"%.1f".format(diferencia)} cal")
 }
+fun reto24() {
+    println("=========Reto 24==========")
+    val manifiesto = "(())(())"
+    val pila = mutableListOf<Char>()
+    var balanceado = true
+    for (c in manifiesto) {
+        when (c) {
+            '(' -> pila.add(c)
+            ')' -> if (pila.isEmpty()) { balanceado = false; break } else pila.removeLast()
+        }
+    }
+    if (pila.isNotEmpty()) balanceado = false
+    println("Contenedores balanceados: $balanceado")
+}
