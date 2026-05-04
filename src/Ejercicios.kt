@@ -224,3 +224,13 @@ fun reto20() {
     while (j < agenda2.size) resultado.add(agenda2[j++])
     println("Agenda maestra: $resultado")
 }
+fun reto21() {
+    println("=========Reto 21==========")
+    fun esPrimo(n: Int): Boolean {
+        if (n < 2) return false
+        for (i in 2..Math.sqrt(n.toDouble()).toInt()) if (n % i == 0) return false
+        return true
+    }
+    val pisos = Array(100) { it + 1 }.filter { esPrimo(it) }
+    println("Pisos con mantenimiento especial: $pisos")
+}
