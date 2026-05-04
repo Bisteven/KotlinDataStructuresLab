@@ -306,3 +306,19 @@ fun reto28() {
     fun consultarCosto(horas: Int): Int = tarifas[horas] ?: error("Horas fuera de rango (1..10)")
     for (h in 1..10) { println("$h hora(s): $${consultarCosto(h)}") }
 }
+
+fun reto29() {
+    println("=========Reto 29==========")
+    val maletas = listOf(10, 25, 35, 15, 40, 20)
+    val target = 50
+    var encontrado = false
+    for (i in maletas.indices) {
+        for (j in i + 1 until maletas.size) {
+            if (maletas[i] + maletas[j] == target) {
+                println("Par encontrado: ${maletas[i]} kg y ${maletas[j]} kg (suman $target kg)")
+                encontrado = true
+            }
+        }
+    }
+    if (!encontrado) println("No se encontró ningún par que sume $target kg")
+}
