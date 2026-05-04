@@ -244,3 +244,13 @@ fun reto22() {
     pop(); pop()
     println("Pila restante: $pila")
 }
+fun reto23() {
+    println("=========Reto 23==========")
+    val calorias = listOf(1800, 2100, 1950, 2200, 1700)
+    val hoy = calorias.last()
+    val anteriores = calorias.dropLast(1)
+    val promedio = anteriores.average()
+    val diferencia = hoy - promedio
+    println("Hoy: $hoy cal | Promedio anterior: ${"%.1f".format(promedio)} cal")
+    println("Diferencia: ${if (diferencia >= 0) "+" else ""}${"%.1f".format(diferencia)} cal")
+}
