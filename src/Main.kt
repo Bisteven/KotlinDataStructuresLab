@@ -10,4 +10,5 @@ fun main() {
     reto7()
     reto8()
     reto9()
+    reto10()
 }

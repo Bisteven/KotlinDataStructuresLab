@@ -116,3 +116,13 @@ fun reto9() {
         println("El código [$iso] pertenece a [$nombre]")
     }
 }
+
+
+fun reto10() {
+    println("=========Reto 10==========")
+    val empleados = mutableListOf("Ana", "Luis", "María", "Juan", "Sofía", "Pedro", "Valeria")
+    val k = 2
+    val rotado = empleados.drop(k) + empleados.take(k)
+    println("Turno original: $empleados")
+    println("Turno rotado $k posiciones: $rotado")
+}
