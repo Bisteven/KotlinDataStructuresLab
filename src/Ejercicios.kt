@@ -98,3 +98,14 @@ fun reto7() {
     println("Despensa: $despensa")
 }
 
+
+
+fun reto8() {
+    println("=========Reto 8==========")
+    val notas = listOf(
+        Pair(4.5, 0.30), Pair(3.8, 0.40), Pair(4.2, 0.30)
+    )
+    val definitiva = notas.sumOf { (nota, porcentaje) -> nota * porcentaje }
+    println("Nota final definitiva: ${"%.2f".format(definitiva)}")
+}
+
