@@ -57,5 +57,15 @@ fun reto4() {
         println("Hay $value unidades de $key en el carrito")
     }
 }
+fun reto5() {
+    println("=========Reto 5==========")
+    val urls = arrayOf("inicio.com", "noticias.com", "tienda.com", "perfil.com", "contacto.com")
+    val invertido = Array(urls.size) { "" }
+    for (i in urls.indices) {
+        invertido[i] = urls[urls.size - 1 - i]
+    }
+    println("Historial invertido:")
+    invertido.forEach { println("  → $it") }
+}
 
 
