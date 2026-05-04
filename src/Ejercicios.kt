@@ -109,3 +109,10 @@ fun reto8() {
     println("Nota final definitiva: ${"%.2f".format(definitiva)}")
 }
 
+fun reto9() {
+    println("=========Reto 9==========")
+    val paises = mapOf("CO" to "Colombia", "MX" to "México", "US" to "Estados Unidos")
+    for ((iso, nombre) in paises) {
+        println("El código [$iso] pertenece a [$nombre]")
+    }
+}
