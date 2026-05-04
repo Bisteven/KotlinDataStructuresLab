@@ -274,3 +274,16 @@ fun reto25() {
     val sinOutliers = tiempos.filter { it != tiempos.min() && it != tiempos.max() }
     println("Promedio real: ${"%.2f".format(sinOutliers.average())} min")
 }
+
+fun reto26() {
+    println("=========Reto 26==========")
+    val logs = listOf("UP", "UP", "DOWN", "DOWN", "DOWN", "UP")
+    val comprimido = mutableListOf<Pair<String, Int>>()
+    for (estado in logs) {
+        if (comprimido.isNotEmpty() && comprimido.last().first == estado) {
+            val ultimo = comprimido.removeLast()
+            comprimido.add(Pair(ultimo.first, ultimo.second + 1))
+        } else { comprimido.add(Pair(estado, 1)) }
+    }
+    comprimido.forEach { (e, c) -> println("$e aparece $c veces") }
+}
