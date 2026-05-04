@@ -157,4 +157,12 @@ fun reto14() {
     val unico = tickets.groupingBy { it }.eachCount().filter { it.value == 1 }.keys.first()
     println("Primer ticket único: $unico")
 }
+fun reto15() {
+    println("=========Reto 15==========")
+    val precios = mapOf("Leche" to 3200, "TV" to 1500000, "Pan" to 2500, "Laptop" to 3200000)
+    val conIva = precios.mapValues { (_, precio) ->
+        if (precio > 50000) (precio * 1.19).toInt() else precio
+    }
+    conIva.forEach { (p, v) -> println("$p: $$v") }
+}
 
