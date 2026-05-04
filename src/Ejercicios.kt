@@ -68,4 +68,13 @@ fun reto5() {
     invertido.forEach { println("  → $it") }
 }
 
+fun reto6() {
+    println("=========Reto 6==========")
+    val persona1 = setOf("fútbol", "lectura", "cocina", "viajes")
+    val persona2 = setOf("música", "lectura", "viajes", "cine")
+    val comunes = persona1.intersect(persona2)
+    val exclusivos = persona1.subtract(persona2)
+    println("Pasatiempos en común: $comunes")
+    println("Exclusivos de persona1: $exclusivos")
+}
 
