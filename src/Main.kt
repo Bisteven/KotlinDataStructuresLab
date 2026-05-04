@@ -27,4 +27,5 @@ fun main() {
     reto24()
     reto25()
     reto26()
+    reto27()
 }

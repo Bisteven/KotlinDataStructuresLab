@@ -287,3 +287,12 @@ fun reto26() {
     }
     comprimido.forEach { (e, c) -> println("$e aparece $c veces") }
 }
+fun reto27() {
+    println("=========Reto 27==========")
+    val ventas = mapOf("Pedro" to 12000, "Ana" to 8500, "Luis" to 15000, "María" to 9000)
+    val promedio = ventas.values.average()
+    println("Promedio del equipo: ${"%.0f".format(promedio)}")
+    println("Vendedores con bono:")
+    ventas.filter { it.value > promedio }
+        .forEach { (nombre, venta) -> println("  ✓ $nombre: $$venta") }
+}
