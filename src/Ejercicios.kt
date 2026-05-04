@@ -185,3 +185,12 @@ fun reto17() {
     println("Diagonal principal: $sumaPrincipal")
     println("Diagonal secundaria: $sumaSecundaria")
 }
+fun reto18() {
+    println("=========Reto 18==========")
+    val chef1 = mapOf("harina" to 2.0, "sal" to 0.5, "azúcar" to 1.0)
+    val chef2 = mapOf("harina" to 1.5, "mantequilla" to 0.3, "sal" to 0.2)
+    val fusion = (chef1.keys + chef2.keys).toSet().associateWith { ing ->
+        (chef1[ing] ?: 0.0) + (chef2[ing] ?: 0.0)
+    }
+    fusion.forEach { (ing, cant) -> println("$ing: $cant tazas") }
+}
