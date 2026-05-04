@@ -210,3 +210,17 @@ fun reto19() {
     println("Top 10 apps:")
     apps.take(10).forEachIndexed { i, (app, stars) -> println("${i+1}. $app ★$stars") }
 }
+fun reto20() {
+    println("=========Reto 20==========")
+    val agenda1 = listOf("Ana", "Carlos", "Elena")
+    val agenda2 = listOf("Beatriz", "Diana", "Fernando")
+    val resultado = mutableListOf<String>()
+    var i = 0; var j = 0
+    while (i < agenda1.size && j < agenda2.size) {
+        if (agenda1[i] <= agenda2[j]) resultado.add(agenda1[i++])
+        else resultado.add(agenda2[j++])
+    }
+    while (i < agenda1.size) resultado.add(agenda1[i++])
+    while (j < agenda2.size) resultado.add(agenda2[j++])
+    println("Agenda maestra: $resultado")
+}

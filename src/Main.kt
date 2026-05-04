@@ -20,4 +20,5 @@ fun main() {
     reto17()
     reto18()
     reto19()
+    reto20()
 }
