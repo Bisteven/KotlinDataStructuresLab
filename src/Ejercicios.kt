@@ -268,3 +268,9 @@ fun reto24() {
     if (pila.isNotEmpty()) balanceado = false
     println("Contenedores balanceados: $balanceado")
 }
+fun reto25() {
+    println("=========Reto 25==========")
+    val tiempos = listOf(180, 210, 195, 165, 220, 200, 188)
+    val sinOutliers = tiempos.filter { it != tiempos.min() && it != tiempos.max() }
+    println("Promedio real: ${"%.2f".format(sinOutliers.average())} min")
+}
