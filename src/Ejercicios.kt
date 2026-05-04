@@ -296,3 +296,13 @@ fun reto27() {
     ventas.filter { it.value > promedio }
         .forEach { (nombre, venta) -> println("  ✓ $nombre: $$venta") }
 }
+
+fun reto28() {
+    println("=========Reto 28==========")
+    val tarifas = mapOf(
+        1 to 2000, 2 to 3500, 3 to 5000, 4 to 6000, 5 to 7000,
+        6 to 8000, 7 to 9000, 8 to 10000, 9 to 11000, 10 to 12000
+    )
+    fun consultarCosto(horas: Int): Int = tarifas[horas] ?: error("Horas fuera de rango (1..10)")
+    for (h in 1..10) { println("$h hora(s): $${consultarCosto(h)}") }
+}
