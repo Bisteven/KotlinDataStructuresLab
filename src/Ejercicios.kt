@@ -194,3 +194,19 @@ fun reto18() {
     }
     fusion.forEach { (ing, cant) -> println("$ing: $cant tazas") }
 }
+fun reto19() {
+    println("=========Reto 19==========")
+    val apps = mutableListOf(
+        Pair("WhatsApp", 4.3), Pair("TikTok", 4.7),
+        Pair("Maps", 4.5), Pair("Gmail", 4.1)
+    )
+    for (i in apps.indices) {
+        for (j in 0 until apps.size - 1 - i) {
+            if (apps[j].second < apps[j + 1].second) {
+                val temp = apps[j]; apps[j] = apps[j + 1]; apps[j + 1] = temp
+            }
+        }
+    }
+    println("Top 10 apps:")
+    apps.take(10).forEachIndexed { i, (app, stars) -> println("${i+1}. $app ★$stars") }
+}
