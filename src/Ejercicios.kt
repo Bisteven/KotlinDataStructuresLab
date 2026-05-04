@@ -150,4 +150,11 @@ fun reto13() {
     val paquetes = (1..50).toList()
     val lotes = paquetes.chunked(10)
     lotes.forEachIndexed { i, lote -> println("Camión ${i + 1}: $lote") }
-}  
+}
+fun reto14() {
+    println("=========Reto 14==========")
+    val tickets = listOf(101, 202, 101, 303, 202, 404, 303)
+    val unico = tickets.groupingBy { it }.eachCount().filter { it.value == 1 }.keys.first()
+    println("Primer ticket único: $unico")
+}
+
