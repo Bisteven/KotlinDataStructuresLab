@@ -145,3 +145,9 @@ fun reto12() {
     }
     println("La ruta es espejo: $esPalindromo")
 }
+fun reto13() {
+    println("=========Reto 13==========")
+    val paquetes = (1..50).toList()
+    val lotes = paquetes.chunked(10)
+    lotes.forEachIndexed { i, lote -> println("Camión ${i + 1}: $lote") }
+}  
