@@ -322,3 +322,16 @@ fun reto29() {
     }
     if (!encontrado) println("No se encontró ningún par que sume $target kg")
 }
+fun reto30() {
+    println("=========Reto 30==========")
+    val plano = arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6))
+    val filas = plano.size; val cols = plano[0].size
+    val transpuesto = Array(cols) { IntArray(filas) }
+    for (i in 0 until filas) {
+        for (j in 0 until cols) { transpuesto[j][i] = plano[i][j] }
+    }
+    println("Plano original (2x3):")
+    plano.forEach { println(it.toList()) }
+    println("Plano transpuesto (3x2):")
+    transpuesto.forEach { println(it.toList()) }
+}
