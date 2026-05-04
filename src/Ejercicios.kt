@@ -136,3 +136,12 @@ fun reto11() {
     }
     agrupados.forEach { (peso, items) -> println("$peso kg: $items") }
 }
+fun reto12() {
+    println("=========Reto 12==========")
+    val ruta = listOf(1, 2, 3, 2, 1)
+    var esPalindromo = true
+    for (i in ruta.indices) {
+        if (ruta[i] != ruta[ruta.size - 1 - i]) { esPalindromo = false; break }
+    }
+    println("La ruta es espejo: $esPalindromo")
+}
