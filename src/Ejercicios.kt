@@ -234,3 +234,13 @@ fun reto21() {
     val pisos = Array(100) { it + 1 }.filter { esPrimo(it) }
     println("Pisos con mantenimiento especial: $pisos")
 }
+fun reto22() {
+    println("=========Reto 22==========")
+    val pila = mutableListOf<String>()
+    fun push(plato: String) { pila.add(plato); println("Agregado: $plato") }
+    fun pop() = if (pila.isNotEmpty()) pila.removeLast().also { println("Lavado: $it") }
+    else println("No hay platos")
+    push("Plato1"); push("Plato2"); push("Plato3")
+    pop(); pop()
+    println("Pila restante: $pila")
+}
